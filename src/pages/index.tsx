@@ -1,15 +1,15 @@
 import type { NextPage } from 'next';
-import { Button, Tooltip } from 'antd';
-import Test from '@components/Test/Test';
+import Projects from '@components/projects/Projects';
+import Head from 'next/head';
 
 const Home: NextPage = () => {
   return (
-    <div>
-      <Tooltip title="test">
-        <Button type="ghost">test</Button>
-      </Tooltip>
-      <Test />
-    </div>
+    <section>
+      <Head>
+        <title>timberhub fe challenge</title>
+      </Head>
+      <Projects />
+    </section>
   );
 };
 

@@ -1,0 +1,37 @@
+@import '~antd/lib/style/themes/default.less';
+@import '../../../styles/colors';
+
+.compWrap {
+  border: none;
+  padding:  @padding-xss @padding-xs;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+
+  svg {
+    margin-right: @margin-xss;
+  }
+}
+
+.grey {
+  &:extend(.body-regular-14);
+  background: @grey-light;
+
+  svg {
+    path {
+      fill: @grey-dark;
+    }
+  }
+}
+
+.orange {
+  &:extend(.body-regular-14);
+  background-color: rgba(@orange, .1);
+  color: @orange-dark;
+
+  svg {
+    path {
+      fill: @orange-dark;
+    }
+  }
+}

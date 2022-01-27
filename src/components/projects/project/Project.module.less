@@ -1,0 +1,28 @@
+@import '~antd/lib/style/themes/default.less';
+@import '../../../styles/colors';
+
+.compWrap {
+  display: flex;
+}
+
+.logoWrapper {
+  display: flex;
+  padding: @padding-xs;
+  border: 1px solid @grey-medium;
+  border-radius: 14px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  margin-left: @margin-sm;
+}
+
+.name {
+  &:extend(.body-regular-15);
+}
+
+.company {
+  &:extend(.body-light);
+  color: @grey;
+}

@@ -1,0 +1,21 @@
+@import '~antd/lib/style/themes/default.less';
+@import '../../../styles/colors';
+
+.compWrap {
+  display: flex;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  margin-left: @margin-sm;
+}
+
+.name {
+  &:extend(.body-regular-15);
+}
+
+.role {
+  &:extend(.body-light);
+  color: @grey;
+}
