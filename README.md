@@ -1,34 +1,74 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🪵 The official Timberhub front end challenge
 
-## Getting Started
+> Implementing a pixel perfect ui, using state-of-the-art technologies
 
-First, run the development server:
+*Result:*
 
-```bash
-npm run dev
-# or
-yarn dev
+| Design | Implementation |
+| :---: | :---: |
+| <img src='https://res.cloudinary.com/ionpetro/image/upload/v1643319715/timberhub/timberhub_kyji4y.png' alt='timberhub design' /> | <img src='https://res.cloudinary.com/ionpetro/image/upload/v1643321474/timberhub/Screenshot_2022-01-28_at_12.11.00_AM_ovt763.png' alt='implementation' /> |
+
+## Get started
+
+* Clone the project:
+
+```shell
+git clone git@github.com:ionpetro/timberhub-fe-challenge.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+* Redirect to the directory created:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```shell
+cd timberhub-fe-challenge
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+* Install dependencies and run development mode
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```shell
+yarn && yarn dev
+```
 
-## Learn More
+Navigate to https://localhost:3000 and enjoy 🕹
 
-To learn more about Next.js, take a look at the following resources:
+## Data fetching
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To serve data to the front end, I used the `Next.js` api routes that is implemented inside the framework. See `src/pages/api/projects.ts`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+In order to fetch data to the client, `axios` library was used.
 
-## Deploy on Vercel
+## Technologies
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Tools
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+I used `React` with `NextJS`. 
+
+Other development tools that were used are:
+
+- **Eslint**: For coding standards
+- **Prettier**: For code formatting
+- **Husky**: For code linting before commits
+- **Typescript**: for type checking and autocomplete.
+
+### Styling
+
+For styling, I chose `antd` component library followed by `less` preprocessor in order to demonstrate the use and set up of the library. `CSS modules` are also supported.
+
+### Testing
+
+I used `jest` and `@testing-library` to unit test a service and a component (demo purposes).
+
+### Folder structure
+
+Inside `/src` folder you can find a `/components` folder that hosts all the components of the app.
+Inside that, each folder represent the wrapper of a next page, and that includes the components only relevant to that page.
+Usually, you also have a `/shared` folder with the components used throughout the whole application. 
+
+```
+/components
+|  <page>
+|  |  <components_relevant_to_page>
+/pages
+```
+
+
+
