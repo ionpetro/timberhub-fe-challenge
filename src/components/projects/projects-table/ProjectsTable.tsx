@@ -1,10 +1,6 @@
 import React from 'react';
 import { Progress, Table } from 'antd';
-import {
-  ProjectModel,
-  ProjectsModel,
-  ProjectsResponseDto,
-} from '@models/projects/projects';
+import { ProjectModel, ProjectsModel } from '@models/projects/projects';
 import Project from '@components/projects/project/Project';
 import Author from '@components/projects/author/Author';
 import { AuthorModel } from '@models/author/author';
@@ -13,7 +9,7 @@ import styles from './ProjectsTable.module.less';
 
 type ProjectsTableProps = {
   loading: boolean;
-  projects?: ProjectsResponseDto;
+  projects?: ProjectsModel[];
 };
 
 const ProjectsTable: React.FC<ProjectsTableProps> = ({ loading, projects }) => {
@@ -56,13 +52,13 @@ const ProjectsTable: React.FC<ProjectsTableProps> = ({ loading, projects }) => {
       loading={loading}
       rowKey={(project: ProjectsModel) => project.id}
       columns={columns}
-      dataSource={projects?.rows || []}
+      dataSource={projects || []}
     />
   );
 };
 
 ProjectsTable.defaultProps = {
-  projects: undefined,
+  projects: [],
 };
 
 export default ProjectsTable;
