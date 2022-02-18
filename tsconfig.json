@@ -24,6 +24,7 @@
       "@services/*": ["src/services/*"],
       "@styles/*": ["src/styles/*"],
       "@utils/*": ["src/utils/*"],
+      "@hooks/*": ["src/hooks/*"],
       "@mocks/*": ["src/mocks/*"]
     },
     "incremental": true
