@@ -52,7 +52,9 @@ const ProjectsTable: React.FC<ProjectsTableProps> = ({ loading, projects }) => {
 
   return (
     <Table
-      pagination={false}
+      pagination={{
+        defaultPageSize: 3,
+      }}
       loading={loading}
       rowKey={(project: ProjectsModel) => project.id}
       columns={columns}
